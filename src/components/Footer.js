@@ -1,45 +1,40 @@
-import { ReactComponent as Copy } from "../Assets/copyright-regular.svg"
-import { ReactComponent as GitHub } from '../Assets/github.svg'
-import { ReactComponent as Linkedin } from '../Assets/linkedin.svg'
-import { ReactComponent as Gmail } from '../Assets/Gmail.svg'
-import { ReactComponent as User } from '../Assets/user-regular.svg'
-import { ReactComponent as Phone } from '../Assets/phone-solid.svg'
-import { ReactComponent as Location } from '../Assets/location-dot-solid.svg'
+import React from 'react'
+
 export default function Footer() {
-    return (
-        <div className="footer">
-            <div className="footerItems">
-                <div className="linksicon">
-                    <a className="Gittext" href="https://github.com/PavanKadagi"  target='_blank'><GitHub className="github" /> </a>
-                    <br></br>
-                    <a className="Gittext" href="https://www.linkedin.com/in/pavan-kadagi/"  target='_blank'><Linkedin className="linkedin" /> </a>
-                    <br></br>
-                    <a className="Gittext" href="mailto:pavankadagi@gmail.com"  target='_blank'><Gmail className="Gmail"/> </a>
-                </div>
-                <div className="textData">
-                    <ul>
-                            <li><i class="fad fa-user-check"></i> <span className="Services">Services</span> </li>
-                            <li><a  href="#"> HTML</a></li>
-                            <li><a  href="#"> CSS</a></li>
-                            <li><a href="#"> JavaScript</a></li>
-                            <li><a  href="#"> React Js</a></li>
-                            <li><a  href="#"> Express js</a></li>
-                            <li><a  href="#">Node</a></li>
-                            <li><a  href="#">MongoDB</a></li>
-                    </ul>
-                </div>
-                <div className="textData">
-                    <ul   >
-                            <li ><i class="fad fa-user-check"></i> <span className="Contact">Contact</span> </li>
-                            <li ><a href="#"><User className="User"/> Name : Pavan Kadagi </a></li>
-                            <li><a  href="mailto:pavankadagi@gmail.com"  target='_blank'><Gmail className="User"/> Email : pavankadagi@gmail.com</a></li>
-                            <li><a  href="tel:+919156260067"  target='_blank'><Phone className="User" /> Contact : +91-9156260067</a></li>
-                            <li><a  href="#"><Location class="User" /> Address : Pune,maharashtra, India</a></li>
-                    </ul>
-                </div>
-                
-            </div>
-            <div className="copyRight"> <Copy className="c"  /> 2023 Copy rights: Pavan Kadagi</div>
-        </div>
-    )
+  return (
+    <>
+        <footer>
+             <section className="section-footer">
+                 <aside className="footer-left">
+                     <div>
+                           <img className="footer-logo"  src="./images/Footer-Logo.svg" alt='footer-logo' />
+                           <div className="social-logo">
+                             <img className="l" src="./images/icon-facebook.svg" alt='facebook' />
+                            <img src="./images/icon-youtube.svg" alt='youtube' /> 
+                            <img src="./images/icon-twitter.svg" alt='twitter' />
+                            <img src="./images/icon-pinterest.svg" alt='pinterest' />
+                            <img src="./images/icon-instagram.svg" alt='instagram' />   
+                         </div>
+                     </div>
+                     <div className="footer-nav">
+                             <p>About Us</p>
+                             <p>Contact</p>
+                             <p>Blog</p>
+                     </div>
+                     <div className="footer-nav" >
+                         <p>Careers</p>
+                          <p>Support</p>
+                           <p>Privacy Policy</p>
+                     </div>
+                 </aside>
+ 
+                 <div className="footer-right">
+                     <button className="Request-Button" type="button">Request Invite</button>
+                     <p className="copy-right">© Easybank. All Rights Reserved</p>
+                 </div>
+                    
+             </section>
+     </footer>  
+    </>
+  )
 }

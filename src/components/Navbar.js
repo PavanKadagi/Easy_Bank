@@ -1,33 +1,55 @@
-import myPic from '../Assets/myPic.jpg'
-export default function Navbar() {
-    return (
-        <div className="navBar">
-            <ul className="list">
-                <div className="listItems">
-                    <li >HOME</li>
-                    <li>ABOUT</li>
-                    <li>CONTACT</li>
-                    <li>PROJECTS</li>
-                </div>
-                <div className="listItemspic">
-                   <li><img className='myPic' src={myPic} /></li>
-                </div>
-            </ul>
-            <div className="mySelf">
-                <h4 className="name">My name is</h4>
-                <h2 className='name1'>Pavan Kadagi</h2>
-                <div>I am Web Developer </div>
-                <p className='content'>FullStack developer & Passion for Building new Projects
-                            with new Challenges to solve with full functionality.
-                            Strong Javascript & React Js. There are three responses to
-                            a piece of design – yes, no, and WOW! Wow is the one to
-                            aim for.
-                </p>
-                <hr></hr>
-                <span className='contact'>Contact: </span> <a className='phone' href="tel:+919156260067">+919156260067</a>
-                <br></br>
-                <span className='gmail'>Gmail: </span><a className='mail' href="mailto:pavankadagi@gmail.com">pavankadagi@gmail.com</a>
-            </div>
-        </div>
-    )
+import React from 'react'
+
+export default function NavBar() {
+
+    const handleButton = ()=>{
+        let close_img = "./images/icon-close.svg"
+        let menu_img = "./images/icon-hamburger.svg"
+        let menu = document.querySelector(".menu");  
+        let menu_list = document.querySelector(".menu-list");  
+        if (menu.alt==1) {
+            menu_list.style.display = "none"
+            menu.src = menu_img;
+            menu.alt = 0;
+        }
+        else if (menu.alt == 0) {
+            menu_list.style.display = "block";
+            menu.src = close_img;
+             menu.alt = 1;
+        }
+      }
+
+  return (
+    <>
+        <div className="top-header">
+       
+       <header className="header">
+         <div className="Header-Container">
+           <img src="./images/logo.svg" alt='logo' />
+           <ul  className="Header-list">
+           <li><a href='/#' >Home</a></li>
+               <li><a href='/#'>About</a></li>
+               <li><a href='/#'>Contact</a></li>
+               <li><a href='/#'>Blog</a></li>
+               <li><a href='/#'>Careers</a></li>
+             </ul>
+             <button className="Request-Button" type="button">Request Invite</button>
+             <button id="Hanberger" className="menu-button" onClick={handleButton}  >
+             <img className="menu" src="./images/icon-hamburger.svg" alt="0" />
+             </button>
+         </div>
+       </header>
+     </div>
+ 
+     <div className="menu-list">
+         <ul>
+              <li><a href='/#' >Home</a></li>
+               <li><a href='/#'>About</a></li>
+               <li><a href='/#'>Contact</a></li>
+               <li><a href='/#'>Blog</a></li>
+               <li><a href='/#'>Careers</a></li>
+         </ul>
+     </div>
+    </>
+  )
 }

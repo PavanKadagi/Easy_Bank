@@ -1,29 +1,23 @@
 import './App.css';
-import data from './Data'
-import Navbar from "./components/Navbar";
-import Card from './components/Card'
-import Footer from './components/Footer'
+import ChooseEasyBank from './components/ChooseEasyBank';
+import Footer from './components/Footer';
+import LatestArticles from './components/LatestArticles';
+import MainHeading from './components/MainHeading';
+import NavBar from './components/NavBar';
+
 
 function App() {
   return (
-    <div className="App">
-          <Navbar />
-          {
-            data.map((e)=>{
-              return(
-                  <Card
-                      id={e.id}
-                      title={e.title}
-                      description={e.description}
-                      GitHub={e.GitHub}
-                      Hosted={e.Hosted}
-                      Image={e.image}
-                  />
-              )
-          }) 
-          }
-          <Footer/>
-    </div>
+    <>
+       <NavBar />
+     {/* 1st main  */}
+     <MainHeading />    
+      {/* 2nd main  */}
+     <ChooseEasyBank />
+     {/* 3rd main  */}
+     <LatestArticles />
+     <Footer />
+    </>
   );
 }
 
